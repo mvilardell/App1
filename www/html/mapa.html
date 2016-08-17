@@ -186,7 +186,7 @@
 													position: posi,
 													content: "<button type='button' id='interaccio'><img src='"+dades[im]+"'></button></br><button onclick= window.location.href='"+dades[l]+"'>Visita</button></br>ID:"+dades[i]+"</br>Nom:"+dades[n]+"</br>Descripcio:"+dades[d]
 												});
-												$("#interaccio").click(function(){
+												$("#interaccio").on("click", function(){
 													alert("click");
 													$.ajax({type: "POST",
 														url: "http://www.grupllobet.com/apptest/App1/log_interaccions.php",
