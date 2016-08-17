@@ -181,7 +181,7 @@
 												//UBICAR EL MARCADOR AL MAPA
 												marca.setMap(mapa);
 
-												$("#interaccio").on("click", function(){
+												function interaccio(){
 													alert("click");
 													$.ajax({type: "POST",
 														url: "http://www.grupllobet.com/apptest/App1/log_interaccions.php",
@@ -191,9 +191,9 @@
 												
 												var infowindow = new google.maps.InfoWindow({
 													position: posi,
-													content: "<button type='button' id='interaccio'><img src='"+dades[im]+"'></button></br><button onclick= window.location.href='"+dades[l]+"'>Visita</button></br>ID:"+dades[i]+"</br>Nom:"+dades[n]+"</br>Descripcio:"+dades[d]
+													content: "<button onclick= interaccio()><img src='"+dades[im]+"'></button></br><button onclick= window.location.href='"+dades[l]+"'>Visita</button></br>ID:"+dades[i]+"</br>Nom:"+dades[n]+"</br>Descripcio:"+dades[d]
 												});
-												$("#interaccio").on("click", function(){
+												function interaccio(){
 													alert("click");
 													$.ajax({type: "POST",
 														url: "http://www.grupllobet.com/apptest/App1/log_interaccions.php",
