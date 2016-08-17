@@ -191,15 +191,9 @@
 												
 												var infowindow = new google.maps.InfoWindow({
 													position: posi,
-													content: "<button onclick= interaccio()><img src='"+dades[im]+"'></button></br><button onclick= window.location.href='"+dades[l]+"'>Visita</button></br>ID:"+dades[i]+"</br>Nom:"+dades[n]+"</br>Descripcio:"+dades[d]
+													content: "<button onclick= function interaccio(){alert('click'); $.ajax({type: 'POST', url: 'http://www.grupllobet.com/apptest/App1/log_interaccions.php', data: ({IdUser: fIdUser, IdMarca: fIdMarca})});};><img src='"+dades[im]+"'></button></br><button onclick= window.location.href='"+dades[l]+"'>Visita</button></br>ID:"+dades[i]+"</br>Nom:"+dades[n]+"</br>Descripcio:"+dades[d]
 												});
-												function interaccio(){
-													alert("click");
-													$.ajax({type: "POST",
-														url: "http://www.grupllobet.com/apptest/App1/log_interaccions.php",
-														data: ({IdUser: fIdUser, IdMarca: fIdMarca})
-													});
-												}
+												
 											
 												infowindow.open(mapa,marca);
 												
