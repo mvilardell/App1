@@ -26,6 +26,12 @@
 		   z-index: 10;
 		   display: none;
 		}
+		#contingut{
+			background-color: white;
+			width:80%;
+			height:80%;
+			margin: 0 auto;
+		}
 	</style>
 	<!--ESTILS DE BOOTSTRAP -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet"/>
@@ -300,14 +306,15 @@
 		</form>
 	</div>
 	<div id='myDiv'>
-		<button onclick=theFunction()>tancar</button>
-
-		<script type="text/javascript">
-			function theFunction(){
-				alert("click");
-				document.getElementById('myDiv').style.display = 'none';
-			}
-		</script>
+		<div id='contingut'>
+			<button onclick=theFunction()>tancar</button>
+			
+			<script type="text/javascript">
+				function theFunction(){
+					document.getElementById('myDiv').style.display = 'none';
+				}
+			</script>
+		</div>
 	</div>	
 </body>
 </html>
