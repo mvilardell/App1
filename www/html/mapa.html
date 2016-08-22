@@ -184,8 +184,12 @@
 												
 												if(dades[alerta] != null){
 													if(dades[alerta] != ""){
-														//$('#myDiv').html(dades[alerta]);
+														//$('#myDiv').html(dades[alerta]+"<button onclick='theFunction();'>tancar</button>");
 														$('#myDiv').show();
+														
+														/*function theFunction () {
+															$('myDiv').hide();
+														}*/
 													}
 												}
 												
@@ -296,7 +300,7 @@
 		</form>
 	</div>
 	<div id='myDiv'>
-		<button onclick="theFunction();">tancar</button>
+		<button onclick= theFunction()>tancar</button>
 
 		<script type="text/javascript">
 			function theFunction () {
