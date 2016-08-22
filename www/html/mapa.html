@@ -16,6 +16,16 @@
 			left:0px;
 			position:absolute;
 		}
+		#myDiv {
+		   position: absolute;
+		   top: 0;
+		   left: 0;
+		   width: 100vw;
+		   height: 100vh;
+		   background-color: rgba(0,0,0,0.6);
+		   z-index: 10;
+		   display: none;
+		}
 	</style>
 	<!--ESTILS DE BOOTSTRAP -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet"/>
@@ -174,7 +184,8 @@
 												
 												if(dades[alerta] != null){
 													if(dades[alerta] != ""){
-														alert(dades[i]+dades[alerta]);
+														$('#myDiv').html(dades[alerta]);
+														$('#myDiv').show();
 													}
 												}
 												
@@ -283,6 +294,9 @@
 				</tr>
 			</table>
 		</form>
+	</div>
+	<div id='myDiv'>
+		<!-- add the fields/buttons here -->
 	</div>	
 </body>
 </html>
