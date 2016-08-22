@@ -171,7 +171,10 @@
 													icon:'../imatges/logo_grup_llobet.png',
 													titol: dades[n]
 												});
-												alert(dades[i]+dades[alerta]);
+												
+												if(dades[alerta] != null){
+													alert(dades[i]+dades[alerta]);
+												}
 												
 												var fIdMarca = dades[i];
 												var fIdUser = localStorage.getItem("Id");
