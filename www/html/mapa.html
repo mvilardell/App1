@@ -30,7 +30,7 @@
 			background-color: white;
 			width:80%;
 			height:80%;
-			margin: 0 auto;
+			margin: auto;
 		}
 	</style>
 	<!--ESTILS DE BOOTSTRAP -->
@@ -190,12 +190,12 @@
 												
 												if(dades[alerta] != null){
 													if(dades[alerta] != ""){
-														//$('#myDiv').html(dades[alerta]+"<button onclick='theFunction();'>tancar</button>");
+														$('#contingut').html(dades[alerta]+"<button onclick='theFunction();'>tancar</button>");
 														$('#myDiv').show();
 														
-														/*function theFunction () {
-															$('myDiv').hide();
-														}*/
+														function theFunction(){
+															document.getElementById('myDiv').style.display = 'none';
+														}
 													}
 												}
 												
@@ -307,13 +307,13 @@
 	</div>
 	<div id='myDiv'>
 		<div id='contingut'>
-			<button onclick=theFunction()>tancar</button>
+			<!--<button onclick=theFunction()>tancar</button>
 			
 			<script type="text/javascript">
 				function theFunction(){
 					document.getElementById('myDiv').style.display = 'none';
 				}
-			</script>
+			</script>-->
 		</div>
 	</div>	
 </body>
