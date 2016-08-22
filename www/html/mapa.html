@@ -172,8 +172,10 @@
 													titol: dades[n]
 												});
 												
-												if(dades[alerta] != null || dades[alerta] != " "){
-													alert(dades[i]+dades[alerta]);
+												if(dades[alerta] != null){
+													if(dades[alerta] != ""){
+														alert(dades[i]+dades[alerta]);
+													}
 												}
 												
 												var fIdMarca = dades[i];
@@ -284,4 +286,3 @@
 	</div>	
 </body>
 </html>
-
