@@ -10,7 +10,12 @@
 	<script type="text/javascript" src="js/md5.js"></script>
 	<script>
 	$(function(){
+	
+		var email_local = localStorage.getItem("Email");
 		$(document).on("ready", function(){
+		
+			$("#Email").val(email_local);
+			
 			$("#ferlogin").click(function(){
 				var fEmail = $("#Email").val();
 				var fPassw = $("#Passw").val();
@@ -57,7 +62,7 @@
 				<table>	
 					<tr>
 						<td><label for="Email">Email:</label></td>
-						<td><input type="text"  name="Email" id="Email" value= localStorage.getItem("Email");  /></td>
+						<td><input type="text"  name="Email" id="Email" value=""/></td>
 					</tr>
 					<tr>
 						<td><label for="Passw">Password:</label></td>
