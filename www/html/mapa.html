@@ -141,6 +141,7 @@
 							var x = 4;
 							var l = 5;
 							var im = 6;
+							var alerta = 7;
 						
 							$.ajax({type: "POST", 
 								url: "http://www.grupllobet.com/apptest/App1/distancia.php",
@@ -169,7 +170,9 @@
 													position:posi,
 													icon:'../imatges/logo_grup_llobet.png',
 													titol: dades[n]
+													alert(dades[alerta]);
 												});
+												
 												var fIdMarca = dades[i];
 												var fIdUser = localStorage.getItem("Id");
 												$.ajax({type: "POST",
@@ -202,13 +205,14 @@
 										//AGREGAR EL MARCADOR A LA VARIABLE MARCADORS_BD
 										marcadors_bd.push(marca);
 										
-										i=i+7;
-										n=n+7;
-										d=d+7;
-										y=y+7;
-										x=x+7;
-										l=l+7;
-										im=im+7;
+										i=i+8;
+										n=n+8;
+										d=d+8;
+										y=y+8;
+										x=x+8;
+										l=l+8;
+										im=im+8;
+										alerta=alerta+8;
 									}
 									/*$("#clicimg").click(function(){
 										alert("click");
