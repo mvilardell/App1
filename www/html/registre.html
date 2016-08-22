@@ -10,6 +10,17 @@
 	<script>
 	$(function(){
 		$(document).on("ready", function(){
+		
+			$.ajax({type: "POST",
+				url:"http://www.grupllobet.com/apptest/App1/veure_poblacions.php",
+				cache: false,
+				dataType: "text",
+				success: Buscar_poblacions
+			});
+			function Buscar_poblacions(data){
+				$('#poblacio').html(data);
+			}
+			
 			$("#ferregistre").click(function(){
 				
 				var expresio = /[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
@@ -69,6 +80,10 @@
 			<tr>
 				<td><label>Repeteix contrasenya:</label></td> 
 				<td><input type="password" name="Passw2" id="Passw2" value=""></td>
+			</tr>
+			<tr>
+				<td><label>Població:</label></td> 
+				<td><div id="poblacio"></div></td>
 			</tr>
 			<tr>
 				<td><button type="button" onclick="window.location.href='../index.html'">Tornar</button></td>
