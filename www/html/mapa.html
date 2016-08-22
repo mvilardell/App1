@@ -190,12 +190,10 @@
 												
 												if(dades[alerta] != null){
 													if(dades[alerta] != ""){
-														$('#contingut').html(dades[alerta]+"<button onclick='theFunction();'>tancar</button>");
+														$('#contingut').html(dades[i]+"<button onclick='theFunction();'>tancar</button><script>function theFunction(){document.getElementById('myDiv').style.display = 'none';}</script>");
 														$('#myDiv').show();
 														
-														function theFunction(){
-															document.getElementById('myDiv').style.display = 'none';
-														}
+														
 													}
 												}
 												
