@@ -149,7 +149,9 @@
 						if(data != null)
 						{
 							var dades = data.split("#");
-
+							var content_popup = null;
+							var count = 0;
+							
 							var i = 0;
 							var n = 1;
 							var d = 2;
@@ -190,8 +192,10 @@
 												
 												if(dades[alerta] != null){
 													if(dades[alerta] != ""){
-														$('#contingut2').html(dades[i]+"<button onclick='theFunction();'>tancar</button>");
-														$('#myDiv').show();
+														count++;
+														content_popup[count] = dades[i];
+														//$('#contingut2').html(dades[i]+"<button onclick='theFunction();'>tancar</button>");
+														//$('#myDiv').show();
 														
 													}
 												}
@@ -237,6 +241,10 @@
 										im=im+8;
 										alerta=alerta+8;
 									}
+									
+									$('#contingut2').html(content_popup+"<button onclick='theFunction();'>tancar</button>");
+									$('#myDiv').show();
+									
 									/*$("#clicimg").click(function(){
 										alert("click");
 										$.ajax({type: "POST",
