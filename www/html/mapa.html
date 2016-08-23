@@ -34,6 +34,9 @@
 			top: 50%;
 			overflow: scroll;
 		}
+		#contingut2{
+			margin: auto;
+		}
 	</style>
 	<!--ESTILS DE BOOTSTRAP -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet"/>
@@ -247,7 +250,7 @@
 										alertaURL=alertaURL+10;
 									}
 									
-									$('#contingut2').html(content_popup);
+									$('#contingut').html(content_popup);
 									$('#myDiv').show();
 									
 									/*$("#clicimg").click(function(){
@@ -317,12 +320,11 @@
 	</div>
 	<div id='myDiv'>
 		<div id='contingut'>
-			<div id='contingut2'>
 			
-			</div>
-			<div id='contingut3'>
-				<button onclick='theFunction();'>tancar</button>
-			</div>			
+		</div>
+		<div id='contingut2'>
+			<button onclick='theFunction();'>tancar</button>
+						
 			<script type="text/javascript">
 				function theFunction(){
 					document.getElementById('myDiv').style.display = 'none';
