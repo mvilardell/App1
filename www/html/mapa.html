@@ -149,8 +149,7 @@
 						if(data != null)
 						{
 							var dades = data.split("#");
-							var content_popup = [];
-							var count = 0;
+							var content_popup = null;
 							
 							var i = 0;
 							var n = 1;
@@ -193,8 +192,7 @@
 												if(dades[alerta] != null){
 													if(dades[alerta] != ""){
 														
-														content_popup[count] = "</br>ID:"+dades[i]+"</br>Alerta:"+dades[alerta]+"</br></br></br></br>";
-														count++;
+														content_popup = content_popup+"</br>ID:"+dades[i]+"</br>Alerta:"+dades[alerta]+"</br></br></br></br>";
 														//$('#contingut2').html(dades[i]+"<button onclick='theFunction();'>tancar</button>");
 														//$('#myDiv').show();
 														
@@ -243,7 +241,6 @@
 										alerta=alerta+8;
 									}
 									
-									//content_popup=content_popup.replace(",","");
 									$('#contingut2').html(content_popup+"<button onclick='theFunction();'>tancar</button>");
 									$('#myDiv').show();
 									
