@@ -193,7 +193,7 @@
 												if(dades[alerta] != null){
 													if(dades[alerta] != ""){
 														
-														content_popup[count] = dades[i];
+														content_popup[count] = "</br>ID:"+dades[i]+"</br>Alerta:"+dades[alerta]+"</br></br></br></br>";
 														count++;
 														//$('#contingut2').html(dades[i]+"<button onclick='theFunction();'>tancar</button>");
 														//$('#myDiv').show();
@@ -243,6 +243,7 @@
 										alerta=alerta+8;
 									}
 									
+									content_popup=content_popup.replace(",","");
 									$('#contingut2').html(content_popup+"<button onclick='theFunction();'>tancar</button>");
 									$('#myDiv').show();
 									
