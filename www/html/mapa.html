@@ -62,13 +62,6 @@
 				llista[i].setMap(null);
 			}
 		}
-		/*function interaccio(fIdUser, fIdMarca){
-			alert("click");
-			$.ajax({type: "POST",
-				url: "http://www.grupllobet.com/apptest/App1/log_interaccions.php",
-				data: ({IdUser: fIdUser, IdMarca: fIdMarca})
-			});
-		}*/
 
 		
 		$(document).on("ready", function(){
@@ -155,6 +148,7 @@
 						{
 							var dades = data.split("#");
 							var content_popup = "";
+							boolean popup = false;
 							
 							var i = 0;
 							var n = 1;
@@ -198,7 +192,7 @@
 												
 												if(dades[alerta] != null){
 													if(dades[alerta] != ""){
-														
+														popup = true;
 														content_popup = content_popup+"</br>"+dades[alerta]+"</br><a href='http://www.grupllobet.com/apptest/App1/log_interaccionsalerta.php?url="+dades[alertaURL]+"&ID="+dades[i]+"&IdUser="+fIdUser+"'><img src='"+dades[alertaImagen]+"'></a></br></br></br>";
 														//$('#contingut2').html(dades[i]+"<button onclick='theFunction();'>tancar</button>");
 														//$('#myDiv').show();
@@ -250,25 +244,10 @@
 										alertaURL=alertaURL+10;
 									}
 									
-									$('#contingut').html(content_popup);
-									$('#myDiv').show();
-									
-									/*$("#clicimg").click(function(){
-										alert("click");
-										$.ajax({type: "POST",
-											url: "http://www.grupllobet.com/apptest/App1/log_interaccions.php",
-											data: ({IdUser: fIdUser, IdMarca: fIdMarca})
-										});								
-									});*/
-									/*google.maps.event.addListener(infoWindow,'click',function(){
-										//var fIdMarca_interaccio = marca.idMarcador;
-										//var fIdUser_interaccio = localStorage.getItem("Id");
-										$.ajax({type: "POST",
-											url: "http://www.grupllobet.com/apptest/App1/log_interaccions.php",
-											data: ({IdUser: fIdUser, IdMarca: fIdMarca})
-										});
-										
-									});*/
+									if(popup != false){
+										$('#contingut').html(content_popup);
+										$('#myDiv').show();
+									}									
 									
 								}
 							});
@@ -334,4 +313,3 @@
 	</div>	
 </body>
 </html>
-
