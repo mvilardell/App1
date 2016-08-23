@@ -16,6 +16,11 @@
 			left:0px;
 			position:absolute;
 		}
+		#refresh{
+			bottom:0px;
+			left:0px;
+			position:absolute;
+		}
 		#myDiv {
 		   position: absolute;
 		   top: 0;
@@ -82,8 +87,8 @@
 				
 				//maximumAge- Guarda la posicion por x minutos 
 				//enableHighAccuracy: Se tratan de obtener los mejores resultados posible del GPS
-				//timeout: el tiempo maximo que se espera para obtener la posicion en este caso 5 segundos
-				var options = {maximumAge: 30000, enableHighAccuracy:true, timeout: 5000};
+				//timeout: el tiempo maximo que se espera para obtener la posicion en este caso 15 segundos
+				var options = {maximumAge: 30000, enableHighAccuracy:true, timeout: 15000};
 				navigator.geolocation.getCurrentPosition(exito, falla, options );
 			}//FIN IF
 			else {
@@ -283,6 +288,10 @@
 	<div id="mapa">
 		<h2>Aquí anirà el mapa!</h2>
 	</div>
+	<div id="refresh">
+		<button onclick='Refrescar();'>Refrescar</button>
+	</div>
+	
 	<div id="infor">
 		<form id="formulari">
 			<table>				
