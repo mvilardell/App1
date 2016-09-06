@@ -7,6 +7,8 @@
         version   = "1.0.0">
 
     <name>GEOKANA</name>
+	<description>Play the GAME.</description>
+    <author email="hello@geokana.com" href="http://www.geokana.com">GEOKANA.com</author>
 
 
 
