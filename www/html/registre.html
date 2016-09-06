@@ -65,33 +65,38 @@
 	});
 	</script>
 </head>
-<body>
+<body><center>
 	<div id="formulari">
-		<h1>REGISTRE</h1>
+	<br><br>
+		<h1>REGISTRO</h1>
 		<form method="POST">
 			<table>
 			<tr>
 				<td><label>Email:</label></td> 
 				<td><input type="text" name="Email" id="Email" value=""></td>
 			</tr>
+			<tr><td>&nbsp;</td></tr>
 			<tr>
 				<td><label>Password:</label></td> 
 				<td><input type="password" name="Passw" id="Passw" value=""></td>
 			</tr>
+			<tr><td>&nbsp;</td></tr>
 			<tr>
-				<td><label>Repeteix password:</label></td> 
+				<td><label>Repetir password:</label></td> 
 				<td><input type="password" name="Passw2" id="Passw2" value=""></td>
 			</tr>
-			<tr>
+			<!--<tr>
 				<td><label>Població:</label></td> 
 				<td><div id="poblacio"></div></td>
-			</tr>
+			</tr>-->
+			<tr><td>&nbsp;</td></tr>
 			<tr>
-				<td><button type="button" onclick="window.location.href='../index.html'">Tornar</button></td>
-				<td><button type="button" id="ferregistre">OK</button></td>
+				<td><button type="button" onclick="window.location.href='../index.html'" class="btn btn-default btn-lg">Cancelar</button></td>
+				<td><button type="button" id="ferregistre" class="btn btn-default btn-lg">Registrarme</button></td>
 			</tr>
 			</table>
 		</form>	
+		<small>Por el hecho de registrarte, aceptas la Nota Legal y Política de Privacidad de <a href="http://www.geokana.com" target="_blank">www.geokana.com</a></small>
 	</div>
 </body>
 </html>
