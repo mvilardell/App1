@@ -147,7 +147,7 @@
 				marcador.setMap(mapa);		
 			
 				$.ajax({type: "POST", 
-					url: "http://www.grupllobet.com/apptest/App1/llista.php",
+					url: "http://www.geokana.com/app/1/llista.php",
 					dataType: "text",
 					success:function(data){
 						if(data != null)
@@ -168,7 +168,7 @@
 							var alertaURL = 9;
 						
 							$.ajax({type: "POST", 
-								url: "http://www.grupllobet.com/apptest/App1/distancia.php",
+								url: "http://www.geokana.com/app/1/distancia.php",
 								dataType: "text",
 								success:function(data){
 									
@@ -192,14 +192,14 @@
 												var marca = new google.maps.Marker({
 													idMarcador:dades[i],
 													position:posi,
-													icon:'../imatges/logo_grup_llobet.png',
+													icon:'../imatges/logo_geokana.png',
 													titol: dades[n]
 												});
 												
 												if(dades[alerta] != null){
 													if(dades[alerta] != ""){
 														popup = true;
-														content_popup = content_popup+"</br>"+dades[alerta]+"</br><a href='http://www.grupllobet.com/apptest/App1/log_interaccionsalerta.php?url="+dades[alertaURL]+"&ID="+dades[i]+"&IdUser="+fIdUser+"'><img src='"+dades[alertaImagen]+"'></a></br></br></br>";
+														content_popup = content_popup+"</br>"+dades[alerta]+"</br><a href='http://www.geokana.com/app/1/log_interaccionsalerta.php?url="+dades[alertaURL]+"&ID="+dades[i]+"&IdUser="+fIdUser+"'><img src='"+dades[alertaImagen]+"'></a></br></br></br>";
 														//$('#contingut2').html(dades[i]+"<button onclick='theFunction();'>tancar</button>");
 														//$('#myDiv').show();
 														
@@ -209,7 +209,7 @@
 												var fIdMarca = dades[i];
 												var fIdUser = localStorage.getItem("Id");
 												$.ajax({type: "POST",
-													url: "http://www.grupllobet.com/apptest/App1/log_marcas.php",
+													url: "http://www.geokana.com/app/1/log_marcas.php",
 													data: ({IdUser: fIdUser, IdMarca: fIdMarca})
 												});
 												//UBICAR EL MARCADOR AL MAPA
@@ -218,7 +218,7 @@
 												
 												var infowindow = new google.maps.InfoWindow({
 													position: posi,
-													content: "<a href='http://www.grupllobet.com/apptest/App1/log_interaccions.php?url="+dades[l]+"&ID="+dades[i]+"&IdUser="+fIdUser+"'><img src='"+dades[im]+"'></a></br><a href='http://www.grupllobet.com/apptest/App1/log_interaccions.php?url="+dades[l]+"&ID="+dades[i]+"&IdUser="+fIdUser+"'>Visita</a></br>ID:"+dades[i]+"</br>Nom:"+dades[n]+"</br>Descripcio:"+dades[d]
+													content: "<a href='http://www.geokana.com/app/1/log_interaccions.php?url="+dades[l]+"&ID="+dades[i]+"&IdUser="+fIdUser+"'><img src='"+dades[im]+"'></a></br><a href='http://www.geokana.com/app/1/log_interaccions.php?url="+dades[l]+"&ID="+dades[i]+"&IdUser="+fIdUser+"'>Visita</a></br>ID:"+dades[i]+"</br>Nom:"+dades[n]+"</br>Descripcio:"+dades[d]
 												});
 											
 												infowindow.open(mapa,marca);
@@ -227,7 +227,7 @@
 												var marca = new google.maps.Marker({
 													idMarcador:dades[i],
 													position:posi,
-													icon:'../imatges/logo_grup_llobet_negre.png',
+													icon:'../imatges/logo_geokana2.png',
 													titol: dades[n]
 												});
 												
