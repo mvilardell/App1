@@ -29,19 +29,19 @@
 				var fPassw = $("#Passw").val();
 				var fPassw2 = $("#Passw2").val();
 				if(fEmail == ""){
-					alert('Email necessari');
+					alert('Email obligatorio!');
 					$("#Email").focus();
 				}else{
 					if(!expresio.test(fEmail)){	
 						$("#Email").val("");
-						alert('Email no vàlid');
+						alert('Email no válido!');
 						$("#Email").focus();
 					}else{
 					
 						if(fPassw != fPassw2){						
 							$("#Passw").val("");
 							$("#Passw2").val("");
-							alert("Contrasenyes diferents");
+							alert("Los passwords no coinciden!");
 						}else{
 							$("#Email").val("");
 							$("#Passw").val("");
@@ -94,6 +94,7 @@
 				<td><button type="button" onclick="window.location.href='../index.html'" class="btn btn-default btn-lg">Cancelar</button></td>
 				<td><button type="button" id="ferregistre" class="btn btn-default btn-lg">Registrarme</button></td>
 			</tr>
+			<tr><td>&nbsp;</td></tr>
 			</table>
 		</form>	
 		<small>Por el hecho de registrarte, aceptas la Nota Legal y Política de Privacidad de <a href="http://www.geokana.com" target="_blank">www.geokana.com</a></small>
